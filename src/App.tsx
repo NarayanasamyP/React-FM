@@ -61,7 +61,7 @@ class App extends React.Component {
     target='#container'  ref={dialog => this.dialogInstance = dialog!}/>
       {
         this.state.inputLinkClicked? <DialogComponent showCloseIcon={true} buttons={this.buttons} header={'dynamic rendering'}  width='250px' locale='fr-BE' content='This Dialog Created Dynamically!' 
-        target='#container'  ref={dialog1 => this.dialogInstance1 = dialog1!}/> : ''
+        target='#container'  ref={dialog1 => this.dialogInstance1 = dialog1!}><UploaderComponent autoUpload={false} asyncSettings={this.path} /></DialogComponent> : ''
       }
        {
         this.state.createUpload? <UploaderComponent autoUpload={false} asyncSettings={this.path} />: ''
